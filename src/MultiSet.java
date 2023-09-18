@@ -10,32 +10,32 @@ public class MultiSet {
     // default constructor
     public MultiSet() {
         // create a new empty ArrayList
-        self.list = new ArrayList<Integer>();
+        this.list = new ArrayList<Integer>();
     }
 
-    public static boolean add(Integer item) {
-        self.list.add(item);
-        return True; // didn't state any case where it should throw F
+    public boolean add(Integer item) {
+        this.list.add(item);
+        return true; // didn't state any case where it should throw F
     }
 
-    public static void remove(Integer item) {
-        return self.list.remove(item);  // if successfully removed, return T
+    public void remove(Integer item) {
+        this.list.remove(item);
     }
 
-    public static boolean contains(Integer item) {
-        return self.list.contains(item);
+    public boolean contains(Integer item) {
+        return this.list.contains(item);
     }
 
-    public static boolean is_empty() {
-        return self.list.is_empty();
+    public boolean is_empty() {
+        return this.list.isEmpty();
     }
 
-    public static Integer count(Integer item) {
-        return Collections.frequency(self.list, item);
+    public Integer count(Integer item) {
+        return Collections.frequency(this.list, item);
     }
 
-    public static Integer size() {
-        return self.list.size();
+    public Integer size() {
+        return this.list.size();
     }
 
 }
